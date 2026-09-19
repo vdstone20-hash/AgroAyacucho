@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroAyacucho - Conectamos productores con compradores</title>
+    <!-- Conexión correcta del archivo CSS externo para Spring Boot -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="logo-container">
+            <div>
+                <h2>🌾 AgroAyacucho</h2>
+                <span>Conectamos productores de Ayacucho con compradores</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Buscar compradores</a>
+            <a href="#">Productores</a>
+            <a href="#">Pedidos</a>
+            <a href="#">Mi cuenta</a>
+            <a href="/api/reportes/usuarios" target="_blank" class="btn btn-primary">
+     Reporte de Usuarios 
+</a>
+            <a href="#" class="btn-pub">Publicar producto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Hero y Buscador -->
+    <section class="hero">
+        <h1>Del productor ayacuchano al comprador, sin intermediarios</h1>
+        <p>Publica tu producción, encuentra compradores y vende por cantidad.</p>
+        
+        <div class="hero-btns">
+            <button class="btn-toggle">Soy productor</button>
+            <button class="btn-toggle outline">Busco productos</button>
+        </div>
+
+        <div class="search-bar">
+            <span>¿Qué producto necesitas?</span>
+            <div class="search-inputs">
+                <input type="text" placeholder="Producto | Provincia | Cantidad | Precio">
+                🔍
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Central de Tarjetas -->
+    <div class="main-content">
+        
+        <h3>Compradores buscando productos</h3>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-tag">Comprador</div>
+                <div class="card-title">Restaurante Andino</div>
+                <div class="card-body">
+                    <p>Busca: Papa nativa</p>
+                    <p>Cantidad: 500 kg</p>
+                    <p>Ubicación: Huamanga</p>
+                </div>
+                <a href="#" class="card-btn">"Contactar comprador"</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Comprador</div>
+                <div class="card-title">Mercado Regional</div>
+                <div class="card-body">
+                    <p>Busca: Quinua</p>
+                    <p>Cantidad: 1,000 kg</p>
+                    <p>Ubicación: Lima</p>
+                </div>
+                <a href="#" class="card-btn">"Ver solicitud"</a>
+            </div>
+
+            <div class="card">
+                <div class="card-tag">Comprador</div>
+                <div class="card-title">Distribuidora Ayacucho</div>
+                <div class="card-body">
+                    <p>Busca: Palta</p>
+                    <p>Cantidad: 800 kg</p>
+                    <p>Ubicación: Huanta</p>
+                </div>
+                <a href="#" class="card-btn">"Ofertar producto"</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sección inferior de Estadísticas -->
+    <section class="stats-section">
+        <h3>Impulsamos la agricultura de Ayacucho</h3>
+        <p style="color: var(--text-muted); font-size: 14px; max-width: 600px; margin: 0 auto;">
+            AgroAyacucho ayuda a los productores locales a encontrar compradores de manera rápida, reducir intermediarios y simplificar sus oportunidades de venta.
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>+128</h2>
+                <p>Productores</p>
+            </div>
+            <div class="stat-item">
+                <h2>+342</h2>
+                <p>Productos publicados</p>
+            </div>
+            <div class="stat-item">
+                <h2>+85</h2>
+                <p>Compradores</p>
+            </div>
+            <div class="stat-item">
+                <h2>+15,000 kg</h2>
+                <p>Comercializados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace para ver datos en JSON -->
+    <div class="db-link">
+        <a href="/usuarios/listar">Ver Registros de BD (JSON)</a>
+
+    </div>
+
+</body>
+</html>

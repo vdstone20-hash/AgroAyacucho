@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="usuarios_profesional" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d">
+    
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    
+    <field name="id" class="java.lang.Long"/>
+    <field name="nombre" class="java.lang.String"/>
+    <field name="correo" class="java.lang.String"/>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    
+    <title>
+        <band height="65" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="55" backcolor="#1A365D" uuid="5039542a-1300-4822-8348-18e42f9b1c09"/>
+                <graphicElement>
+                    <pen lineWidth="0.0"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="5" width="350" height="20" forecolor="#FFFFFF" uuid="b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[REPORTE DE USUARIOS - AGROAYACUCHO]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="25" width="350" height="15" forecolor="#E2E8F0" uuid="c3d4e5f6-a78b-9c0d-1e2f-3a4b5c6d7e8f"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[Sistema de Gestión - Listado General de Usuarios]]></text>
+            </staticText>
+            <textField pattern="dd/MM/yyyy">
+                <reportElement x="415" y="8" width="130" height="15" forecolor="#FFFFFF" uuid="d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="455" y="25" width="90" height="15" forecolor="#FFFFFF" uuid="e5f6a78b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Listado General]]></text>
+            </staticText>
+        </band>
+    </title>
+    
+    <columnHeader>
+        <band height="25" splitType="Stretch">
+            <staticText>
+                <reportElement mode="Opaque" x="0" y="0" width="80" height="20" backcolor="#E2E8F0" uuid="f6a78b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#CBD5E1"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="9" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="80" y="0" width="220" height="20" backcolor="#E2E8F0" uuid="a78b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#CBD5E1"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="9" isBold="true"/>
+                    <paragraph leftIndent="5"/>
+                </textElement>
+                <text><![CDATA[NOMBRE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement mode="Opaque" x="300" y="0" width="255" height="20" backcolor="#E2E8F0" uuid="8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#CBD5E1"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="9" isBold="true"/>
+                    <paragraph leftIndent="5"/>
+                </textElement>
+                <text><![CDATA[CORREO ELECTRÓNICO]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    
+    <detail>
+        <band height="18" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="80" height="18" uuid="9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#E2E8F0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="80" y="0" width="220" height="18" uuid="0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#E2E8F0"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="8"/>
+                    <paragraph leftIndent="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="300" y="0" width="255" height="18" uuid="1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#E2E8F0"/>
+                </box>
+                <textElement verticalAlignment="Middle">
+                    <font size="8"/>
+                    <paragraph leftIndent="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    
+    <pageFooter>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="5" width="300" height="12" forecolor="#64748B" uuid="2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5a6b7c"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["AgroAyacucho - Reporte de Usuarios"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="400" y="5" width="155" height="12" forecolor="#64748B" uuid="3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
